@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="cosmicBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#191740"/>
+      <stop offset="60%" stop-color="#0E0D24"/>
+      <stop offset="100%" stop-color="#080914"/>
+    </radialGradient>
+    <linearGradient id="neonGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF83B4"/>
+      <stop offset="50%" stop-color="#BD65FF"/>
+      <stop offset="100%" stop-color="#54E6AB"/>
+    </linearGradient>
+    <filter id="bloom">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#cosmicBg)"/>
+
+  <!-- Orbital Rings -->
+  <circle cx="200" cy="200" r="170" fill="none" stroke="#FF83B4" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.35"/>
+  <circle cx="200" cy="200" r="130" fill="none" stroke="#BD65FF" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.45"/>
+  <circle cx="200" cy="200" r="90" fill="none" stroke="#54E6AB" stroke-width="2" opacity="0.6"/>
+
+  <!-- Satellite node -->
+  <circle cx="310" cy="130" r="6" fill="#FF83B4" filter="url(#bloom)"/>
+  <circle cx="110" cy="270" r="5" fill="#54E6AB" filter="url(#bloom)"/>
+
+  <!-- Stylized Cosmic Avatar / Developer Silhouette -->
+  <!-- Head -->
+  <circle cx="200" cy="155" r="42" fill="#141336" stroke="url(#neonGlow)" stroke-width="3" filter="url(#bloom)"/>
+  
+  <!-- Cyber visor / AI Glow Eye -->
+  <path d="M175 152 Q200 148 225 152 Q200 156 175 152" fill="none" stroke="#54E6AB" stroke-width="3" filter="url(#bloom)"/>
+
+  <!-- Shoulders / Torso -->
+  <path d="M130 270 C130 215 160 205 200 205 C240 205 270 215 270 270 Z" fill="#141336" stroke="url(#neonGlow)" stroke-width="3"/>
+
+  <!-- Core Reactor -->
+  <circle cx="200" cy="240" r="10" fill="#FF83B4" filter="url(#bloom)"/>
+  <circle cx="200" cy="240" r="4" fill="#FFFFFF"/>
+</svg>
+
